@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alliance Recap — 1H 2026 &amp; 2H Pipeline | Capitalize Analytics</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{--navy:#0f2a43;--blue:#1f6fb2;--teal:#18a999;--gold:#e8a33d;--red:#c0504d;--slate:#5a6b7d;--bg:#f4f6f9;--card:#ffffff;--line:#e3e8ee;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:#22303d;line-height:1.45;}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 24px 60px;}
+  header{background:var(--navy);color:#fff;padding:34px 0 30px;}
+  header .wrap{padding-top:0;padding-bottom:0;}
+  h1{font-size:26px;font-weight:700;letter-spacing:.2px;}
+  .sub{color:#b9c9d8;font-size:14px;margin-top:6px;}
+  .badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:3px 12px;font-size:12px;margin-top:12px;margin-right:6px;}
+  h2{font-size:19px;color:var(--navy);margin:38px 0 4px;border-left:4px solid var(--teal);padding-left:10px;}
+  .h2sub{font-size:13px;color:var(--slate);margin:0 0 14px 14px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:18px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:0 1px 3px rgba(15,42,67,.06);}
+  .kpi .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--slate);}
+  .kpi .val{font-size:26px;font-weight:700;color:var(--navy);margin-top:4px;}
+  .kpi .note{font-size:12px;color:var(--slate);margin-top:3px;}
+  .kpi.hl{border-top:3px solid var(--teal);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+  @media(max-width:840px){.grid2,.grid3{grid-template-columns:1fr;}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;box-shadow:0 1px 3px rgba(15,42,67,.06);}
+  .card h3{font-size:14px;color:var(--navy);margin-bottom:10px;}
+  .chartbox{position:relative;height:280px;}
+  .chartbox.tall{height:340px;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{text-align:left;color:var(--slate);font-size:11px;text-transform:uppercase;letter-spacing:.5px;padding:7px 8px;border-bottom:2px solid var(--line);}
+  td{padding:7px 8px;border-bottom:1px solid var(--line);}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .bar{height:9px;border-radius:5px;background:#e8edf2;overflow:hidden;margin-top:8px;}
+  .bar>span{display:block;height:100%;border-radius:5px;}
+  .pill{display:inline-block;font-size:11px;font-weight:600;border-radius:12px;padding:2px 9px;}
+  .pill.won{background:#e2f4ef;color:#0e7a63;}
+  .pill.open{background:#e7f0fa;color:#1f6fb2;}
+  .pill.lost{background:#faeaea;color:#a13835;}
+  .pill.cap{background:#fdf2df;color:#9a6516;}
+  .timeline{list-style:none;}
+  .timeline li{position:relative;padding:0 0 16px 26px;border-left:2px solid var(--line);margin-left:8px;}
+  .timeline li:last-child{border-left:2px solid transparent;}
+  .timeline li::before{content:'';position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:var(--teal);border:2px solid #fff;box-shadow:0 0 0 2px var(--teal);}
+  .timeline .d{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--slate);}
+  .timeline .t{font-size:13.5px;font-weight:600;color:var(--navy);}
+  .timeline .n{font-size:12.5px;color:#44525f;}
+  .callout{background:#eef7f5;border:1px solid #cde8e2;border-left:4px solid var(--teal);border-radius:8px;padding:14px 16px;font-size:13.5px;margin-top:14px;}
+  footer{font-size:11.5px;color:var(--slate);margin-top:44px;border-top:1px solid var(--line);padding-top:14px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Alliance Partnership Recap — 1H 2026 &amp; 2H Pipeline</h1>
+    <div class="sub">Workday Adaptive Planning &amp; Glean &nbsp;|&nbsp; Prepared by Kamal Gregory &nbsp;|&nbsp; Data as of June 29, 2026</div>
+    <span class="badge">Fiscal 1H: Jan–Jun 2026</span>
+    <span class="badge">Sources: Pipedrive, Wedge dashboard, Glean Partner Portal</span>
+  </div>
+</header>
+<div class="wrap">
+
+  <!-- ================= 1H HEADLINES ================= -->
+  <h2>1H Achieved — Headline Numbers</h2>
+  <p class="h2sub">Closed-won revenue, January 1 through June 29, 2026. Software and services shown separately throughout.</p>
+  <div class="kpis">
+    <div class="kpi hl"><div class="lbl">Total Closed Won 1H</div><div class="val">$1.86M</div><div class="note">50 deals, SW + SVC</div></div>
+    <div class="kpi"><div class="lbl">Software Closed</div><div class="val">$773K</div><div class="note">19 deals</div></div>
+    <div class="kpi"><div class="lbl">Services Closed</div><div class="val">$1.08M</div><div class="note">31 deals</div></div>
+    <div class="kpi"><div class="lbl">Open 2H Pipeline</div><div class="val">$5.35M</div><div class="note">88 deals (SW $3.13M / SVC $2.23M)</div></div>
+    <div class="kpi"><div class="lbl">Closing by Sep 30</div><div class="val">$3.86M</div><div class="note">65 deals with Q3 close dates</div></div>
+  </div>
+
+  <div class="grid2" style="margin-top:16px;">
+    <div class="card">
+      <h3>Progress vs. FY27 growth plan (+30% YOY)</h3>
+      <div style="font-size:13px;">Software — <b>$773,078</b> of $858,601 <span style="color:var(--teal);font-weight:700;">(90.0%)</span></div>
+      <div class="bar"><span style="width:90%;background:var(--teal);"></span></div>
+      <div style="font-size:13px;margin-top:14px;">Services — <b>$1,082,457</b> of $2,430,969 <span style="color:var(--blue);font-weight:700;">(44.5%)</span></div>
+      <div class="bar"><span style="width:44.5%;background:var(--blue);"></span></div>
+      <div style="font-size:12px;color:var(--slate);margin-top:12px;">Software is one average deal from the full-year plan at the halfway mark. The 2H story is services conversion: $1.35M gap against $2.23M of open services pipeline.</div>
+    </div>
+    <div class="card">
+      <h3>Closed won by partner (1H)</h3>
+      <div class="chartbox"><canvas id="cPartner"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ================= CLOSED WON ANALYSIS ================= -->
+  <h2>Closed Won Analysis — by Source and by Rep</h2>
+  <p class="h2sub">Where 1H revenue came from and who closed it. Source = original lead origin tagged in CRM.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Closed won by lead source</h3>
+      <div class="chartbox"><canvas id="cSource"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Closed won by Capitalize rep</h3>
+      <div class="chartbox tall"><canvas id="cRep"></canvas></div>
+    </div>
+  </div>
+  <div class="callout"><b>Read:</b> The Workday field team (reps, SMB, CSM) drove $1.17M — 63% — of 1H closed revenue, which is the referral engine working as designed. The next lever is Capitalize-sourced volume: Site Ascend already accounts for $2.04M (38%) of open 2H pipeline vs. just $58K of 1H closes, so Cap-sourced revenue should inflect in 2H.</div>
+
+  <!-- ================= LEAD / CLOSED ================= -->
+  <h2>Lead-to-Closed Analysis — The Wedge (Workday SMB Manufacturing Program)</h2>
+  <p class="h2sub">Joint Capitalize / Workday Commercial program with Pete Owen's team. Joint goal: $2.2M. Wedge dashboard is system of record.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Lead funnel (program to date)</h3>
+      <div class="chartbox"><canvas id="cFunnel"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Program scorecard</h3>
+      <table>
+        <tr><td>Total leads</td><td class="num"><b>26</b></td></tr>
+        <tr><td>Open</td><td class="num"><span class="pill open">16</span></td></tr>
+        <tr><td>Won</td><td class="num"><span class="pill won">3</span> &nbsp;($143,779 closed)</td></tr>
+        <tr><td>Lost</td><td class="num"><span class="pill lost">7</span></td></tr>
+        <tr><td>Open-to-closed rate</td><td class="num">38%</td></tr>
+        <tr><td>Capitalize-sourced leads</td><td class="num"><span class="pill cap">10 of 26 (38%)</span></td></tr>
+        <tr><td>Revenue closed vs. joint goal</td><td class="num">$144K / $2.2M</td></tr>
+      </table>
+      <div style="font-size:12.5px;color:var(--slate);margin-top:10px;">Wins: Red Cat $55K, USA Rare Earth $53.8K, Bake Fresh $35K. Capitalize-sourced share is climbing — 10 of 26 leads now originate from our own Site Ascend motion, including two added in the last two weeks (Marketlab, Camber Pharmaceuticals).</div>
+    </div>
+  </div>
+
+  <!-- ================= 2H PIPELINE ================= -->
+  <h2>2H Pipeline</h2>
+  <p class="h2sub">Open pipeline as of June 29: $5.35M across 88 deals. $3.86M carries a Q3 expected close date.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Pipeline by lead source</h3>
+      <div class="chartbox"><canvas id="cPipeSource"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Pipeline by Capitalize rep</h3>
+      <div class="chartbox tall"><canvas id="cPipeRep"></canvas></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px;">
+    <h3>Top 10 open deal families (software + services combined)</h3>
+    <table>
+      <tr><th>Organization</th><th>Partner</th><th class="num">Software</th><th class="num">Services</th><th class="num">Combined</th><th>Stage</th><th>Expected Close</th></tr>
+      <tr><td>FIS Global</td><td>Workday</td><td class="num">—</td><td class="num">$321,250</td><td class="num"><b>$321,250</b></td><td>Sign + Launch / Approach Alignment</td><td>Jun 29 / Jul 31</td></tr>
+      <tr><td>Stryten Energy</td><td>Workday</td><td class="num">$193,000</td><td class="num">$96,000</td><td class="num"><b>$289,000</b></td><td>Executive Alignment</td><td>Nov 20</td></tr>
+      <tr><td>ExplorUS</td><td>Workday</td><td class="num">$89,746</td><td class="num">$146,000</td><td class="num"><b>$235,746</b></td><td>Approach Alignment</td><td>Jul 10</td></tr>
+      <tr><td>Terumo Cardiovascular</td><td>Workday</td><td class="num">$89,008</td><td class="num">$86,000</td><td class="num"><b>$175,008</b></td><td>Sign + Launch</td><td>Jul 3</td></tr>
+      <tr><td>Sunstate Equipment</td><td>Workday</td><td class="num">$60,000</td><td class="num">$105,000</td><td class="num"><b>$165,000</b></td><td>Exec / Approach Alignment</td><td>Sep 9</td></tr>
+      <tr><td>Truvant North America</td><td>Workday</td><td class="num">$60,000</td><td class="num">$96,000</td><td class="num"><b>$156,000</b></td><td>Exec Alignment / Solution + ROI</td><td>Sep 17</td></tr>
+      <tr><td>Marketlab</td><td>Workday</td><td class="num">$65,000</td><td class="num">$75,000</td><td class="num"><b>$140,000</b></td><td>Approach Alignment</td><td>Jul 17 / Aug 28</td></tr>
+      <tr><td>Dominion Energy</td><td>Vena</td><td class="num">$50,000</td><td class="num">$72,000</td><td class="num"><b>$122,000</b></td><td>Approach / Gap-Value-Urgency</td><td>Jul 31</td></tr>
+      <tr><td>The Rockefeller Foundation</td><td>Workday</td><td class="num">$70,000</td><td class="num">$50,000</td><td class="num"><b>$120,000</b></td><td>Pain Acknowledged</td><td>Aug 31 / Sep 30</td></tr>
+      <tr><td>Park Property Management</td><td>Workday</td><td class="num">$50,000</td><td class="num">$50,000</td><td class="num"><b>$100,000</b></td><td>Gap-Value-Urgency</td><td>Jul 23</td></tr>
+    </table>
+  </div>
+
+  <!-- ================= GLEAN ================= -->
+  <h2>Glean Partnership — 1H Milestones &amp; 2H Plan</h2>
+  <p class="h2sub">Services Partner Agreement, North America. Partnership is 3 weeks old and already has its first Capitalize-sourced opportunity registered.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>1H milestones</h3>
+      <ul class="timeline">
+        <li><div class="d">June 11, 2026</div><div class="t">Service Partner Agreement signed</div><div class="n">Capitalize is an official Glean Services Partner for North America (consulting, configuration, training, professional services).</div></li>
+        <li><div class="d">June 2026</div><div class="t">Partner Portal live, payout schedule in hand</div><div class="n">Portal access secured with Alex Richardson (Partner Development Manager).</div></li>
+        <li><div class="d">June 2026</div><div class="t">Check-in cadence established</div><div class="n">Recurring cadence set with Alex Richardson; joint account mapping completed with Glean AE team (Ian Diaz).</div></li>
+        <li><div class="d">June 2026</div><div class="t">First opportunity registered — Capitalize-sourced</div><div class="n">American National Bank of Texas, sourced by Eryn McMorrow and registered in the Glean portal.</div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>2H pipeline &amp; plan</h3>
+      <table>
+        <tr><th>Opportunity</th><th>Detail</th></tr>
+        <tr><td><b>American National Bank of Texas</b> <span class="pill cap">Cap-sourced</span></td><td>Net-new software + services. Registered in Glean portal (Eryn McMorrow). Client meeting set for August; pricing to follow scoping.</td></tr>
+      </table>
+      <div style="font-size:13px;margin-top:14px;"><b>2H focus:</b></div>
+      <ul style="font-size:13px;margin:6px 0 0 18px;color:#44525f;">
+        <li>Advance ANB of Texas through discovery after the August meeting; first Glean revenue on the board.</li>
+        <li>Convert the joint account map into 2–3 additional registered opportunities.</li>
+        <li>Land the first Glean-side referral (Ian Diaz / Alex Richardson).</li>
+        <li>Scope a first MDF-backed campaign through the Glean Partner Program.</li>
+      </ul>
+      <div class="callout" style="margin-top:16px;"><b>Bottom line:</b> agreement to first registered, Capitalize-sourced opportunity in under 3 weeks. The motion mirrors what worked with Workday: generate our own pipeline rather than waiting on vendor leads.</div>
+    </div>
+  </div>
+
+  <footer>
+    Sources: Pipedrive export June 29, 2026 (software/services pipeline and won files); Wedge dashboard (system of record for the Workday SMB manufacturing program); Glean Partner Portal. Software closed-won includes $219,865 of verified 1H closes (Hermeus, Member Driven Technologies, Oceans Acquisition, Origami Risk, Quaker Window) reconciled from prior exports and the FY26 baseline after dropping from the current raw export. Figures are gross deal value.
+  </footer>
+</div>
+
+<script>
+const C={navy:'#0f2a43',blue:'#1f6fb2',teal:'#18a999',gold:'#e8a33d',red:'#c0504d',slate:'#8fa1b3',grey:'#c9d3dc'};
+const money=v=>'$'+(v>=1e6?(v/1e6).toFixed(2)+'M':Math.round(v/1e3)+'K');
+Chart.defaults.font.family="'Segoe UI',Arial,sans-serif";
+Chart.defaults.font.size=12;
+const tt={callbacks:{label:c=>` ${c.dataset.label||c.label}: $${(c.parsed.y??c.parsed.x??c.parsed).toLocaleString()}`}};
+
+new Chart(cPartner,{type:'bar',data:{
+  labels:['Workday Adaptive','Vena','Glean'],
+  datasets:[
+    {label:'Software',data:[729462,43616,0],backgroundColor:C.navy},
+    {label:'Services',data:[1032457,50000,0],backgroundColor:C.teal}]},
+  options:{maintainAspectRatio:false,plugins:{tooltip:tt},scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:money}}}}});
+
+new Chart(cSource,{type:'bar',data:{
+  labels:['Workday field team','Existing clients & referrals','Marketing & events','Site Ascend (Cap-sourced)','Vena field / untagged'],
+  datasets:[
+    {label:'Software',data:[537980,32402,143692,58000,1005],backgroundColor:C.navy},
+    {label:'Services',data:[635327,325155,118225,0,3750],backgroundColor:C.teal}]},
+  options:{indexAxis:'y',maintainAspectRatio:false,plugins:{tooltip:tt},scales:{x:{stacked:true,ticks:{callback:money}},y:{stacked:true,grid:{display:false}}}}});
+
+new Chart(cRep,{type:'bar',data:{
+  labels:['Adam Tuchscherer','Joe Sienkiewicz','Hank Catalino','Josh Milstein','Jamie Vecchioni','Kelsey Sheldon','Eryn McMorrow','Travis Haworth','Zack Mendenhall','Others'],
+  datasets:[
+    {label:'Software',data:[300086,54863,97342,58000,74126,46200,58720,55000,28742,0],backgroundColor:C.navy},
+    {label:'Services',data:[361102,196875,185105,105000,50000,73000,31450,30000,8050,41875],backgroundColor:C.teal}]},
+  options:{indexAxis:'y',maintainAspectRatio:false,plugins:{tooltip:tt},scales:{x:{stacked:true,ticks:{callback:money}},y:{stacked:true,grid:{display:false}}}}});
+
+new Chart(cFunnel,{type:'bar',data:{
+  labels:['Total leads','Open','Won','Lost'],
+  datasets:[{label:'Leads',data:[26,16,3,7],backgroundColor:[C.slate,C.blue,C.teal,C.red]}]},
+  options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y} leads`}}},scales:{y:{ticks:{stepSize:5}},x:{grid:{display:false}}}}});
+
+new Chart(cPipeSource,{type:'bar',data:{
+  labels:['Site Ascend (Cap-sourced)','Workday field team','Existing clients & referrals','Untagged','Marketing & events','Other / Vena field'],
+  datasets:[
+    {label:'Software',data:[1663000,1026196,0,50000,190496,196100],backgroundColor:C.navy},
+    {label:'Services',data:[377000,846750,424250,340400,110000,130000],backgroundColor:C.teal}]},
+  options:{indexAxis:'y',maintainAspectRatio:false,plugins:{tooltip:tt},scales:{x:{stacked:true,ticks:{callback:money}},y:{stacked:true,grid:{display:false}}}}});
+
+new Chart(cPipeRep,{type:'bar',data:{
+  labels:['Hank Catalino','Joe Sienkiewicz','Adam Tuchscherer','Guy Desrosiers','Jamie Vecchioni','Sufyaan Dayani','Kelsey Sheldon','Others'],
+  datasets:[
+    {label:'Software',data:[1139246,621100,471438,340000,304008,100000,100000,50000],backgroundColor:C.navy},
+    {label:'Services',data:[466400,568250,239750,215000,214000,300000,100000,125000],backgroundColor:C.teal}]},
+  options:{indexAxis:'y',maintainAspectRatio:false,plugins:{tooltip:tt},scales:{x:{stacked:true,ticks:{callback:money}},y:{stacked:true,grid:{display:false}}}}});
+</script>
+</body>
+</html>
