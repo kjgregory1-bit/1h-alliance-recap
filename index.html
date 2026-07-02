@@ -197,7 +197,7 @@ const C={navy:'#0f2a43',blue:'#1f6fb2',teal:'#18a999',gold:'#e8a33d',red:'#c0504
 const money=v=>'$'+(v>=1e6?(v/1e6).toFixed(2)+'M':Math.round(v/1e3)+'K');
 Chart.defaults.font.family="'Segoe UI',Arial,sans-serif";
 Chart.defaults.font.size=12;
-const tt={callbacks:{label:c=>` ${c.dataset.label||c.label}: $${(c.parsed.y??c.parsed.x??c.parsed).toLocaleString()}`}};
+const tt={callbacks:{label:c=>` ${c.dataset.label||c.label}: $${Number(c.raw).toLocaleString()}`}};
 
 new Chart(cPartner,{type:'bar',data:{
   labels:['Workday Adaptive','Vena','Glean'],
