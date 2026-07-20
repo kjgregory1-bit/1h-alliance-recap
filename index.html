@@ -102,7 +102,7 @@
       <div class="chartbox tall"><canvas id="cRep"></canvas></div>
     </div>
   </div>
-  <div class="callout"><b>Read:</b> The Workday field team (reps, SMB, CSM) drove $1.45M — 65% — of YTD closed revenue, which is the referral engine working as designed. The next lever is Capitalize-sourced volume: Site Ascend accounts for $1.76M (32%) of open 2H pipeline vs. just $58K of YTD closes, so Cap-sourced revenue should inflect in 2H.</div>
+  <div class="callout"><b>Read:</b> The Workday field team (reps, SMB, CSM) drove $1.45M — 65% — of YTD closed revenue, which is the referral engine working as designed, and all four Wedge program wins came through that channel. The other engine is Capitalize's own lead generation: <b>Site Ascend is now the single largest source of open pipeline at $1.81M (33%)</b> — $1.52M software + $287K services — plus 14 of 33 Wedge program leads. The motion is young (first close: Tris Pharma, $58K), so the closed-won mix understates it; as this pipeline converts in 2H, Cap-sourced revenue inflects.</div>
 
   <!-- ================= LEAD / CLOSED ================= -->
   <h2>Lead-to-Closed Analysis — The Wedge (Workday SMB Manufacturing Program)</h2>
@@ -230,7 +230,7 @@ new Chart(cFunnel,{type:'bar',data:{
 new Chart(cPipeSource,{type:'bar',data:{
   labels:['Site Ascend (Cap-sourced)','Workday field team','Existing clients & referrals','Untagged','Marketing & events','Other / Vena field'],
   datasets:[
-    {label:'Software',data:[1473000,1236229,100499,152013,190496,131100],backgroundColor:C.navy},
+    {label:'Software',data:[1523000,1236229,100499,102013,190496,131100],backgroundColor:C.navy},
     {label:'Services',data:[287000,710750,537250,390400,150000,130000],backgroundColor:C.teal}]},
   options:{indexAxis:'y',maintainAspectRatio:false,plugins:{tooltip:tt},scales:{x:{stacked:true,ticks:{callback:money}},y:{stacked:true,grid:{display:false}}}}});
 
